@@ -1,0 +1,22 @@
+//<BUTTONS (a.btn+tab)>
+// Сниппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: rem(15) rem(20);
+	border-radius: rem(40);
+	background-color: cl('background');
+	transition: all 0.3s ease;
+
+	font-family: Nunito, sans-serif;
+	color: cl('white');
+	font-size: rem(14);
+	font-weight: 700;
+
+	&--icon {
+		gap: rem(9);
+	}
+}

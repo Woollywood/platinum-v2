@@ -1,0 +1,15 @@
+.text-font {
+	font-family: Nunito, sans-serif;
+}
+
+.title-font {
+	font-family: Wadik, sans-serif;
+}
+
+.section-title {
+	@extend .title-font;
+
+	@include adaptiveValue("font-size", 40, 28, 0, $maxWidthContainer, 375);
+	font-weight: 700;
+	line-height: normal;
+}

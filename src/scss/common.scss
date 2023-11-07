@@ -1,0 +1,76 @@
+//Заголовки, общие БЭМ блоки и т.д.
+
+.background-white {
+	background-color: cl('white');
+}
+
+.background-black {
+	background-color: cl('background');
+}
+
+.section-title {
+	position: relative;
+	padding: rem(124) 0;
+	margin: rem(-2) 0;
+
+	&__container {
+		padding-top: rem(32);
+		padding-bottom: rem(44);
+		position: relative;
+
+		.title-hidden {
+			font-family: Wadik, sans-serif;
+			font-size: rem(117);
+			font-weight: 700;
+			line-height: normal;
+			text-transform: uppercase;
+			white-space: nowrap;
+
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: rem(1);
+			background: linear-gradient(
+				90deg,
+				rgba(255, 255, 255, 0) 0.45%,
+				#e6e6e6 49.56%,
+				rgba(230, 230, 230, 0) 99.49%
+			);
+		}
+
+		&::before {
+			top: 0;
+			left: 0;
+		}
+
+		&::after {
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+.section-title-decor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	font-family: Wadik, sans-serif;
+	font-size: rem(117);
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 24.11%, #fff 48.59%, rgba(255, 255, 255, 0) 72.82%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
