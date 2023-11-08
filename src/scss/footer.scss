@@ -1,10 +1,82 @@
 //====================================================================================================
 
 .footer {
-	padding-top: rem(20);
-	background-color: cl('white');
+	position: relative;
+
+	&__star {
+		position: absolute;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:nth-child(1) {
+			top: 5%;
+			left: 5%;
+		}
+
+		&:nth-child(2) {
+			top: 20%;
+			left: 18%;
+		}
+
+		&:nth-child(3) {
+			top: 19%;
+			left: 76%;
+		}
+
+		&:nth-child(4) {
+			top: 15%;
+			left: 92%;
+		}
+
+		&:nth-child(5) {
+			top: 60%;
+			left: 5%;
+		}
+
+		&:nth-child(6) {
+			top: 80%;
+			left: 14%;
+		}
+
+		&:nth-child(7) {
+			top: 80%;
+			left: 87%;
+		}
+
+		&--dark {
+			svg {
+				fill: cl('dark-1');
+			}
+		}
+
+		&--grey {
+			svg {
+				fill: cl('grey-4');
+			}
+		}
+
+		&--big {
+			svg {
+				width: rem(46);
+				height: rem(46);
+			}
+		}
+
+		&--small {
+			svg {
+				width: rem(32);
+				height: rem(32);
+			}
+		}
+	}
 
 	&__container {
+	}
+
+	&__top {
+		padding: rem(142) 0 rem(48);
 	}
 
 	&__body {
@@ -83,12 +155,13 @@
 
 	&__main {
 		display: flex;
-		flex-wrap: wrap;
+		border-top: rem(1) solid cl('border');
 		padding-top: rem(20);
 		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
-		gap: rem(48);
+		column-gap: rem(140);
+		row-gap: rem(36);
 		justify-content: space-between;
 
 		&:not(:last-child) {
@@ -110,13 +183,14 @@
 
 	&__columns {
 		display: flex;
+		justify-content: space-between;
 		@media (min-width: $mobile) {
 			flex-wrap: wrap;
 		}
 		@media (max-width: $mobile) {
 			flex-direction: column;
 		}
-		@include adaptiveValue('column-gap', 100, 56, 0, $maxWidthContainer, 1024);
+		column-gap: rem(76);
 		row-gap: rem(32);
 	}
 
@@ -126,7 +200,7 @@
 	&__column-title {
 		@extend .title-font;
 
-		@include adaptiveValue('font-size', 25, 20, 0, $maxWidthContainer, 375);
+		font-size: rem(18);
 		font-weight: 700;
 
 		&:not(:last-child) {
@@ -202,14 +276,15 @@
 	}
 
 	&__bottom {
-		@include adaptiveValue('padding-top', 20, 64, 0, 768, 375);
+		padding: rem(20) 0 rem(26);
+		
 		@media (min-width: $mobile) {
 			border-top: 1px solid cl('border');
 		}
 
 		font-family: Syne, sans-serif;
 		@include adaptiveValue('font-size', 20, 16, 0, 768, 375);
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 164%;
 
 		display: flex;

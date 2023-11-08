@@ -13,9 +13,8 @@
 		justify-content: space-between;
 		gap: rem(32);
 
-		@include adaptiveValue('padding-top', 51, 24, 0, $maxWidthContainer, 375);
-		padding-bottom: rem(22);
-		border-bottom: rem(1) solid cl('border-3');
+		padding: rem(62) 0 rem(40);
+		border-bottom: rem(1) solid cl('border');
 	}
 
 	&__logo {
